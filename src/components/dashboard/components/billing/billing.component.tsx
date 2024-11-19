@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Card, CardBody, CardHeader, Stack, Table } from 'react-bootstrap';
 import { ConnectedProps, connect } from 'react-redux';
 import { departmentsMap } from '../../../../config/app-data';
@@ -45,6 +45,10 @@ const BillingComponent = (props: BillingComponentProps) => {
       if (user?.type === CONSTANTS.ADMIN) {
         await props.getCurrentInvoice(department);
         await props.getDepartmentInvoiceHistory(department);
+      }
+      if (user?.type === CONSTANTS.USER) {
+        await props.getCurrentInvoice(user?.department_id);
+        await props.getDepartmentInvoiceHistory(user?.department_id);
       }
     };
     getBillingInfo();
