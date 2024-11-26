@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+# PBM Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Name: `PBM-Frontend`  
+Version: `v1.0.0` 
 
-Currently, two official plugins are available:
+PBM-Frontend is a React-based web application that serves as the user interface for the PBM (Project Bill Master) system. This frontend application allows users to interact with the PBM backend, enabling them to manage printers, users, and mantenance requests efficiently. The application is built using modern web technologies and is designed to provide a seamless and intuitive user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [PBM Backend](https://github.com/houstonlws/PBM-Backend) running on your local machine or a remote server
+- [Node.js (v14 or higher)](http://nodejs.org/en/download/) installed on your machine
 
-- Configure the top-level `parserOptions` property like this:
+### Clone the repository
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/houstonlws/PBM-Frontend.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Start the Development Server
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Navigate to the project directory and install the dependencies using npm, then start the development server:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd PBM-Frontend
+npm install
+npm run dev
 ```
+
+Thats it! You should now be able to access the application by opening your browser and navigating to http://localhost:3000.
+
+## Using PBM Frontend
+
+For a complete walkthrough of the application view the documentation below:
+
+- [Account Setup](https://houstonlws.github.io/PBM/account-setup.html)
+- [User Walkthrough](https://houstonlws.github.io/PBM/user-flow.html)
+- [Admin Walkthrough](https://houstonlws.github.io/PBM/admin-flow.html)
